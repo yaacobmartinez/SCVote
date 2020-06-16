@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, makeStyles, Typography } from "@material-ui/core";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
 	paper: {
 		display: "flex",
@@ -13,16 +13,19 @@ function Splash() {
 	const classes = useStyles();
 	return (
 		<div>
-			<Container
-				maxWidth='xs'
-				style={{ height: "100vh" }}
-				onClick={() => window.location.replace("/landing")}>
+			<Container maxWidth='xs' style={{ height: "100vh" }}>
 				<div className={classes.paper}>
-					<img src='/images/scvote.png' alt='logo' style={{ height: 100 }} />
-					<Typography
-						style={{ fontWeight: 600, fontSize: 30, color: "#2642E3" }}>
-						SCVote
-					</Typography>
+					<Link to='/login' style={{ textDecoration: "none" }}>
+						<img src='/images/scvote.png' alt='logo' style={{ height: 100 }} />
+						<Typography
+							style={{
+								fontWeight: 600,
+								fontSize: 30,
+								color: "#2642E3",
+							}}>
+							SCVote
+						</Typography>
+					</Link>
 				</div>
 			</Container>
 		</div>

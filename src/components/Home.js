@@ -16,7 +16,7 @@ import {
 import CustomAppBar from "./sections/AppBar";
 import { Contacts, Ballot, Done } from "@material-ui/icons";
 import { BallotContext } from "./contexts/BallotContext";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		padding: theme.spacing(9, 1, 4, 1),
@@ -171,8 +171,8 @@ const PositionCard = ({ position_name, position_description }) => {
 		<Grid item xs={12}>
 			<ListItem
 				button
-				component='a'
-				href={`/candidates/${position_name}`}
+				component={Link}
+				to={`/candidates/${position_name}`}
 				alignItems='flex-start'
 				className={classes.listItem}>
 				<ListItemAvatar>

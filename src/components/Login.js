@@ -11,6 +11,7 @@ import {
 	CircularProgress,
 	Slide,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import { BootstrapInput } from "../styledInputs/Inputs";
 import { isEmail } from "validator";
 const useStyles = makeStyles((theme) => ({
@@ -162,7 +163,8 @@ function Login() {
 							</Grid>
 							<Grid item xs={12}>
 								<Button
-									href='/register'
+									component={Link}
+									to='/register'
 									variant='outlined'
 									color='primary'
 									fullWidth
